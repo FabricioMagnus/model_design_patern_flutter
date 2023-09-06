@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:model_design_patern_flutter/pages/menu/components/button_drawer.dart';
 
 class MenuDrawer extends StatefulWidget {
   const MenuDrawer({super.key});
@@ -13,33 +14,9 @@ class _MenuDrawerState extends State<MenuDrawer> {
     return Drawer(
       backgroundColor: const Color.fromARGB(255, 26, 131, 58),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(
-          width: double.infinity,
-          // decoration: const BoxDecoration(
-          //   border: Border(bottom: BorderSide(width: 1)),
-          // ),
-          color: Colors.transparent,
-          child: InkWell(
-            borderRadius:
-                BorderRadius.circular(0), // Define o border radius desejado
-            onTap: () {
-              // Lógica para lidar com o clique do botão
-            },
-            child: Container(
-              padding: const EdgeInsets.all(
-                  16), // Adicione algum espaçamento interno ao botão
-              child: const Text(
-                'Clientes',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ),
+        ButtonDrawer(onTap: () {}, title: "Clientes"),
         const Divider(),
+        ButtonDrawer(onTap: () {}, title: "Clientes"),
       ]),
     );
   }
