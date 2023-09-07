@@ -1,8 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:model_design_patern_flutter/pages/home/home.dart';
-import 'package:model_design_patern_flutter/services/login.dart';
+import 'package:model_design_patern_flutter/services/api.dart';
+import 'package:model_design_patern_flutter/services/loginApi.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController(text: "");
   TextEditingController pwdController = TextEditingController(text: "");
 
+  bool logged = false;
   bool _visible = false;
 
   onSubmit() async {
@@ -23,8 +27,12 @@ class _LoginPageState extends State<LoginPage> {
         "email": emailController.text,
         "pwd": pwdController.text,
       };
+      Api.removeToken();
 
-      await LoginApi().login(body);
+      var response = await LoginApi().login(body);
+      // prefs?.setString("token", response);
+
+      Api.setToken(response);
 
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Home()));
