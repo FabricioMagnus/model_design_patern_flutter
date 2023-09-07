@@ -32,14 +32,14 @@ class _MenuDrawerState extends State<MenuDrawer> {
       backgroundColor: Color(0xFFEDFBEE),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Image.asset("assets/logo.png", height: 70),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            name != '' ? "Bem vindo(a): adsdadkjhadskjhadskjhaskjhajshdkajhsdakjshdakjhsdkjasdkasdadkjhakjhadskjhadskjhkjhadskjhads" : "Engenho AM",
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            overflow: TextOverflow.ellipsis,
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.all(8.0),
+        //   child: Text(
+        //     name != '' ? "Bem vindo(a): adsdadkjhadskjhadskjhaskjhajshdkajhsdakjshdakjhsdkjasdkasdadkjhakjhadskjhadskjhkjhadskjhads" : "Engenho AM",
+        //     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        //     overflow: TextOverflow.ellipsis,
+        //   ),
+        // ),
         // Padding(
         //   padding: const EdgeInsets.all(8.0),
         //   child: RichText(
