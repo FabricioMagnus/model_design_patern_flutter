@@ -90,21 +90,21 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color(0xFFEDFBEE),
         drawer: const MenuDrawer(),
         appBar: AppBar(
-          title: RichText(
-            text: TextSpan(
-              text: name != '' ? '$name - ' : "Engenho AM",
-              style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                  color: Colors.black),
-              children: <TextSpan>[
-                TextSpan(
-                  text: email,
-                  style: const TextStyle(fontWeight: FontWeight.normal),
-                ),
-              ],
-            ),
-          ),
+          // title: RichText(
+          //   text: TextSpan(
+          //     text: name != '' ? '$name - ' : "Engenho AM",
+          //     style: const TextStyle(
+          //         fontSize: 14,
+          //         fontWeight: FontWeight.normal,
+          //         color: Colors.black),
+          //     children: <TextSpan>[
+          //       TextSpan(
+          //         text: email,
+          //         style: const TextStyle(fontWeight: FontWeight.normal),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           actions: [
             IconButton(
               onPressed: () {

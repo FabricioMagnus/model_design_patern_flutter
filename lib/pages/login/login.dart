@@ -3,7 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:model_design_patern_flutter/pages/home/home.dart';
+// import 'package:model_design_patern_flutter/pages/home/home.dart';
 import 'package:model_design_patern_flutter/services/api.dart';
 import 'package:model_design_patern_flutter/services/loginApi.dart';
 
@@ -34,8 +34,9 @@ class _LoginPageState extends State<LoginPage> {
 
       Api.setToken(response);
 
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Home()));
+      // Navigator.pushReplacement(
+      //     context, MaterialPageRoute(builder: (context) => const Home()));
+      Navigator.pushNamed(context, "/home");
     } catch (error) {
       debugPrint(error.toString());
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(

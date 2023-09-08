@@ -17,7 +17,7 @@ class ButtonDrawer extends StatelessWidget {
       child: InkWell(
         borderRadius:
             BorderRadius.circular(0), // Define o border radius desejado
-        onTap: () => onTap,
+        onTap: () => onTap(),
         child: Container(
           padding: const EdgeInsets.all(
               16), // Adicione algum espaçamento interno ao botão
